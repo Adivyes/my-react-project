@@ -1,0 +1,8 @@
+.mainLoginDiv{
+   text-align: center;
+   
+}
+.buttonComponentInLogin{
+    display: flex;
+    justify-content: center;
+}

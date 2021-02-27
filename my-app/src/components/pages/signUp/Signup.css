@@ -1,0 +1,8 @@
+.mainSignUpDiv{
+    text-align: center;
+    
+ }
+ .buttonComponentInSignUp{
+     display: flex;
+     justify-content: center;
+ }

@@ -1,0 +1,14 @@
+.mainDivInput{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inputFlex{
+    display: flex;
+    flex-direction: column;
+}
+
+label{
+    font-weight: bolder;
+}
