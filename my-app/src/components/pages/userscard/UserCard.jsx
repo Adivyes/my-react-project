@@ -1,16 +1,17 @@
 import React from 'react'
-import Header from '../../header/Header'
-import { useLocation } from 'react-router-dom';
+import './UserCard.css'
+import { useHistory } from 'react-router-dom';
 
-
-export default function User() {
-    const location = useLocation();
-    const userData = location.state.data;
+export default function UserCard(props) {
+    const{userData, id}=props
+    const history = useHistory()
+    
+    function showCardDitels(){
+        history.push("/user",{data:userData})
+    }
 
     return (
-        <div>
-            <Header greetings={'User'}/>
-            
+        <div className="card" id={`card${id}`} onClick={showCardDitels}>
             <div className="cardImg"><img className="img1" src={userData.picture.medium}/></div>
             <div className="cardTitle"> 
             <h3>{userData.name.first} {userData.name.last}</h3>
@@ -18,8 +19,6 @@ export default function User() {
             <h6>{userData.email}</h6>
             </div>
             
-        </div> 
-       
+        </div>
     )
 }
-

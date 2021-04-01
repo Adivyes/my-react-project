@@ -1,0 +1,32 @@
+.navbarDiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+    
+    
+}
+.firstLogo{
+    height: 50px;
+    /* margin-top: 10px; */
+}
+.secondLogo{
+    height: 40px;
+    /* margin-top: 10px; */
+
+}
+.allLogo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.h3-header{
+    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+    color: #131313;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-shadow:3px 3px 20px rgba(0,0,0,0.3), 
+    0px -4px 10px rgba(255,255,255,0.3);
+
+}

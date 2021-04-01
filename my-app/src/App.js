@@ -1,18 +1,20 @@
 import './App.css';
 import Footer from './components/footer/Footer';
-import Login from './components/pages/login/Login';
+import Navbar from './components/navbar/Navbar';
+
+import Routerpages from './Routerpages';
+
 
 
 function App() {
   return (
-    <div className="App">
-      
-      <Login/>
-
-      <Footer/>
-
-      
-    </div>
+    <>
+    <Navbar/>
+      <div className="Content">
+      <Routerpages/>
+      </div>
+      <Footer className="Footer"/>
+    </>
   );
 }
 

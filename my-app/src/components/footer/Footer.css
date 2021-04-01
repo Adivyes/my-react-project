@@ -1,5 +1,23 @@
 .mainDivFooter{
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.123);
-    width: 100%;   
+background-color: rgb(156, 156, 156);
+line-height: 24px;
+color: white;
+}
+
+.mainDivFooter .art{
+    background-color: rgb(66, 66, 66);
+    padding-top:  48px;
+    padding: 16px;
+    clip-path: polygon(0% 5%, 15% 0%, 100% 10%, 100% 100%, 0% 100%);
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .content{
+    /* max-width: 1080px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1);
+    grid-gap: 16px; */
+    
 }

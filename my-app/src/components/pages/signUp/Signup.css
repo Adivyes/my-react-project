@@ -1,8 +1,54 @@
 .mainSignUpDiv{
+    display: flex;
     text-align: center;
+    height: 84vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+
+ }
+
+ .signupContiner{
+     width: fit-content;
+
+ }
+ .signupContiner > div{
+  margin: 10px 0;
+  width: 100%;
+ }
+
+.signupContiner > button{
+    margin-right: 10px;
+}
+.signupContiner > button:last-child{
+    margin-right: 0px;
+}
+
+ .button{
+     width: 75px;
+     font-size: xx-small;
+ }
+ .custom-shape-divider-bottom-1615231397 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    z-index: -1;
+}
+
+.custom-shape-divider-bottom-1615231397 svg {
+    position: relative;
+    display: block;
+    width: calc(114% + 1.3px);
+    height: 500px;
+}
+
+.custom-shape-divider-bottom-1615231397 .shape-fill {
+    fill: rgba(0, 191, 255, 0.534);
     
- }
- .buttonComponentInSignUp{
-     display: flex;
-     justify-content: center;
- }
+
+}

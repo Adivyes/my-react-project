@@ -1,7 +1,8 @@
 import React from 'react'
 import './Input.css'
 
-export default function Input() {
+export default function Input(props) {
+    // const{type, placeholder }=props
     return (
         <div className="mainDivInput">
             
@@ -10,6 +11,7 @@ export default function Input() {
             <input type="email"/>
             <label>password</label>
             <input type="password"/>
+            
             </div>
             
         </div>
