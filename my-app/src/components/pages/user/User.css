@@ -1,0 +1,33 @@
+*{
+padding: 0;
+margin: 0;
+}
+.userCard{
+    text-align: center;
+    cursor: pointer;
+    padding: 20px;
+
+width: 40%;
+border-radius: 10px;
+}
+.imgUser1{
+    border-radius: 50%;
+    
+}
+
+.cardImge1 {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.userDisplayContiner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10%;
+    
+}
+
+.detailDesing{
+    margin: 20px;
+}

@@ -8,6 +8,10 @@
   
 
 }
+.errorMessage{
+   color: crimson;
+}
+
 
 .loginContiner{
     width: fit-content;

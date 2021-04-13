@@ -5,19 +5,20 @@ import Header from '../../header/Header'
 import { useHistory } from 'react-router-dom';
 
 export default function Login() {
-    //    const [tousers, setTousers] = useState(false)
+  const [error, setError] = useState ('')
     const history = useHistory()
 
 
-   function userCheck(internce) {
+   function userCheck() {
         let storegKeyValue = localStorage.getItem(document.getElementById("emailInput").value)
         if (storegKeyValue && storegKeyValue === document.getElementById("passwordInput").value) {
             history.push("/users")
+            
             return true
         }
         else {
-            internce = false
-            alert("Worng Password Or Email")
+            
+            setError("Please check your password or email")
         }
     }
 // let error = 'Worng Password Or Email'
@@ -26,8 +27,10 @@ export default function Login() {
             <Header greetings="Login" />
             
             <div className="loginContiner">
+            
                 <TextField id="emailInput" label="Email" variant="outlined" type="email" required /><br /><br />
                 <TextField id="passwordInput" label="Password" variant="outlined" type="password" required /><br />
+                <span className="errorMessage">{error}</span><br/><br/>
                 <Button id="buttonComponentInLogin" variant="contained" size="small" onClick={userCheck}>login</Button>
             </div>
 

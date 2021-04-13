@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{ useState } from 'react'
 import './Signup.css'
 import Header from '../../header/Header'
 import { TextField, Button } from '@material-ui/core';
@@ -7,6 +7,7 @@ import { useHistory } from 'react-router-dom';
 
 
 export default function Signup() {
+    const [error, setErorr] = useState('')
     const history = useHistory()
     function goToLogin() {
         history.push("/login")
@@ -19,14 +20,19 @@ export default function Signup() {
         history.push("/login")
     }
 
-    function checkEmail() {
+    function checkEmail(param) {
 
-        let mailStoreg = localStorage.getItem(document.getElementById('inputId').value)
-        if (mailStoreg) {
-            alert('email exists')
+        // let mailStoreg = localStorage.getItem(document.getElementById('inputId').value)
+        let pattern = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+        if (param.value.match(pattern)) {
+            
+            return true
+        }
+        else{
+            setErorr('Invalid Email!')
             return false
         }
-        return true
+        
     }
 
 
@@ -34,7 +40,7 @@ export default function Signup() {
     function checkPassword() {
         let confirmPassword = document.getElementById('confirmPassword')
         if (document.getElementById('firstPassword').value !== confirmPassword.value) {
-            alert('not good password')
+            setErorr('Please check your password!')
             return false;
         }
         else {
@@ -44,7 +50,8 @@ export default function Signup() {
 
     function validate() {
 
-        if (checkPassword() && checkEmail()) { register() }
+        if (checkEmail(document.getElementById('inputId')) && checkPassword()) 
+            { register() }
 
     }
 
@@ -56,6 +63,7 @@ export default function Signup() {
                 <TextField id="inputId" label="Email" variant="outlined" type="email" required /><br />
                 <TextField id="firstPassword" label="Password" variant="outlined" type="password" required /><br />
                 <TextField id="confirmPassword" label="Password" variant="outlined" type="password" required /><br />
+                <span className="errorMessage">{error}</span><br/><br/>
                 <Button className="button" variant="contained" onClick={validate} size="small">Register</Button>
                 <Button className="button" variant="contained" size="small">Reset</Button>
                 <Button className="button" variant="contained" size="small" onClick={goToLogin}>Login</Button>

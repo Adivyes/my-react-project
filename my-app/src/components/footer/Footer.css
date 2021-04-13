@@ -21,3 +21,10 @@ footer .content{
     grid-gap: 16px; */
     
 }
+.linksDiv a{
+    text-decoration: none;
+    color: white;
+}
+.linksDiv{
+    text-align: center;
+}
