@@ -8,6 +8,13 @@
    
 
  }
+#dayOffImg{
+    background: brown;
+width: 100px;
+height: 200px;
+margin-left: 200px;
+
+}
 
  .signupContiner{
      width: fit-content;
@@ -48,7 +55,7 @@
 }
 
 .custom-shape-divider-bottom-1615231397 .shape-fill {
-    fill: rgba(0, 191, 255, 0.534);
+    fill: #00bfff88;
     
 
 }
