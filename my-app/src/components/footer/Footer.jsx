@@ -17,7 +17,7 @@ export default function Footer() {
 
             </div>
             <div className="linksDiv">
-                <header>Keep In Touch</header>
+                <header>Keep In Touch!</header>
                 <a href='https://www.linkedin.com/in/adiv-shenkor-b16b361bb/'><AiFillLinkedin/></a>
                 <a href='https://www.facebook.com/adiv.shencor'><AiFillFacebook/></a>
                 <a href='https://github.com/Adivyes'><AiFillGithub/></a>
