@@ -3,7 +3,7 @@ import './Signup.css'
 import Header from '../../header/Header'
 import { TextField, Button } from '@material-ui/core';
 import { useHistory } from 'react-router-dom';
-
+import {addUser, getAllUsers} from '../../../service/apiMyServer'
 
 
 export default function Signup() {
@@ -15,9 +15,14 @@ export default function Signup() {
     }
 
     function register() {
+        let userEmail = document.getElementById('inputId').value
+        let userPassword = document.getElementById('firstPassword').value
 
+        let userObj = {user:{userEmail:userEmail,userPassword:userPassword}}
+        
+        getAllUsers().then(res => console.log(res.data))
         localStorage.setItem(document.getElementById('inputId').value, document.getElementById('firstPassword').value);
-
+        addUser(userObj)
         history.push("/login")
     }
 

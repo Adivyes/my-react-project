@@ -1,16 +1,29 @@
-import React, { useState } from 'react'
+import React, { useState,  useEffect } from 'react'
 import './Login.css'
 import { TextField, Button } from '@material-ui/core';
 import Header from '../../header/Header'
 import { useHistory } from 'react-router-dom';
+import { getAllUsers } from '../../../service/apiMyServer'
 
 export default function Login() {
   const [error, setError] = useState ('')
+  const [users , setUsers] = useState ([])
     const history = useHistory()
-
-
+    
+    
+    async function userStateHandler(){
+       const result = await getAllUsers().then((res) =>{console.log(res.data); return res.data})
+         setUsers(result) 
+    }
+    useEffect(userStateHandler,[])
+    
    function userCheck() {
+    // getAllUsers().then((res) =>{console.log(res.data[1]._id)})
+    
+
+console.log(users[1]._id);
         let storegKeyValue = localStorage.getItem(document.getElementById("emailInput").value)
+
         if (storegKeyValue && storegKeyValue === document.getElementById("passwordInput").value) {
             history.push("/users")
             
@@ -21,7 +34,8 @@ export default function Login() {
             setError("Please check your password or email")
         }
     }
-// let error = 'Worng Password Or Email'
+
+// let error = 'Wrong Password Or Email'
     return (
         <div className="mainLoginDiv">
             <Header greetings="Login" />
@@ -31,7 +45,7 @@ export default function Login() {
                 <TextField id="emailInput" label="Email" variant="outlined" type="email" required /><br /><br />
                 <TextField id="passwordInput" label="Password" variant="outlined" type="password" required /><br />
                 <span className="errorMessage">{error}</span><br/><br/>
-                <Button id="buttonComponentInLogin" variant="contained" size="small" onClick={userCheck}>login</Button>
+                <Button id="buttonComponentInLogin" variant="contained" size="small" onClick={userCheck }>login</Button>
             </div>
 
             <div className="custom-shape-divider-bottom-1615231397">

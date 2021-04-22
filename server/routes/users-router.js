@@ -1,13 +1,13 @@
-const moviesRouter = require("express").Router();
-const movieCtrl = require('../controllers/user-ctrl');
+const usersRouter = require("express").Router();
+const userCtrl = require('../controllers/user-ctrl');
 
 
-moviesRouter.get("/all",movieCtrl.getAllUsers);
-moviesRouter.get('/user/:id',movieCtrl.getUser);
-moviesRouter.post("/saveUser",movieCtrl.insertUser);
-moviesRouter.delete('/user/:id',movieCtrl.removeUserById)
-moviesRouter.put('/user/:id',movieCtrl.updateUser)
+usersRouter.get("/all",userCtrl.getAllUsers);
+usersRouter.get('/user/:id',userCtrl.getUser);
+usersRouter.post("/saveUser",userCtrl.insertUser);
+usersRouter.delete('/user/:id',userCtrl.removeUserById)
+usersRouter.put('/user/:id',userCtrl.updateUser)
 
 
-module.exports = moviesRouter;
+module.exports = usersRouter;
 
