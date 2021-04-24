@@ -12,6 +12,18 @@
    color: crimson;
 }
 
+.container{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   
+}
+
+#safeImg{
+   width: auto;
+   height: 200px;
+   margin: 25px;
+}
 
 .loginContiner{
     width: fit-content;

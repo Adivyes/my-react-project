@@ -42,6 +42,18 @@ const userModel = require('../models/user-model');
       res.status(300).json({success: true, data:doc, message:"user update success"})
         })
     }
-   
 
-module.exports = {getAllUsers,getUser,removeUserById,insertUser, updateUser};
+
+
+
+   async function comperLog(req,res){
+const {userEmail, userPassword} = req.body.logInfo
+    await userModel.findOne({userEmail, userPassword}, (err,result)=>{
+        if(err) throw err;
+        if(result) res.status(200).json({success: true, data: result, message: 'user good'})
+        else res.status(400).json({success: false, message: 'user not good'})
+    })
+
+   }
+
+module.exports = {getAllUsers,getUser,removeUserById,insertUser, updateUser, comperLog};

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Header from '../../header/Header'
 import { useLocation } from 'react-router-dom';
 import './User.css'
+import { Button } from '@material-ui/core'
 
 
 
@@ -36,7 +37,8 @@ export default function User() {
                         <h6 className="detailDesing">{userData.phone}</h6>
                         <h6 className="detailDesing">{userData.email}</h6>
 
-                    </div>
+                    </div>            
+
                 </div>
             </div>
         </div>

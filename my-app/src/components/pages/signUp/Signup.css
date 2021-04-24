@@ -3,16 +3,22 @@
     text-align: center;
     height: 84vh;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
    
 
  }
+.innerContiner{
+    display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
 #dayOffImg{
-    background: brown;
-width: 100px;
+width: auto;
 height: 200px;
-margin-left: 200px;
+margin: 25px;
 
 }
 
