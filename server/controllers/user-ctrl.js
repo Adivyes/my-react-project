@@ -50,8 +50,8 @@ const userModel = require('../models/user-model');
 const {userEmail, userPassword} = req.body.logInfo
     await userModel.findOne({userEmail, userPassword}, (err,result)=>{
         if(err) throw err;
-        if(result) res.status(200).json({success: true, data: result, message: 'user good'})
-        else res.status(400).json({success: false, message: 'user not good'})
+        if(result) res.status(200).json({success: true, data: result, message: 'user exists'})
+        else res.status(400).json({success: false, message: 'user not exists'})
     })
 
    }

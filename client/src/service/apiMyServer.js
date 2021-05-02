@@ -1,4 +1,4 @@
-const baseApi = "http://localhost:8080/users/"
+const baseApi = "http://localhost:8082/users/"
 
 export async function addUser(user){
     const requestOptions = {
