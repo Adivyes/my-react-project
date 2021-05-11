@@ -6,8 +6,10 @@
   "scripts": {
     "setup": "npm install && cd client && npm install",
     "start": "node server/index.js",
-    "server": "nodemon Server/index.js",
-    "client": "cd client && npm run start"
+    "server": "set PORT=8082 && nodemon Server/index.js",
+    "client": "cd client && npm run start",
+    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "repository": {
     "type": "git",
@@ -21,7 +23,7 @@
     "cors": "^2.8.5",
     "dotenv": "^9.0.2",
     "express": "^4.17.1",
-    "mongoose": "^5.12.4",
+    "mongoose": "^5.12.8",
     "nodemon": "^2.0.7"
   },
   "bugs": {
