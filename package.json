@@ -8,9 +8,8 @@
     "start": "node server/index.js",
     "server": "set PORT=8082 && nodemon Server/index.js",
     "client": "cd client && npm run start",
-    "build": "ng build",
-    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "cd client && npm install && npm run build"
+    // "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
+    // "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "repository": {
     "type": "git",
