@@ -42,10 +42,6 @@ const userModel = require('../models/user-model');
       res.status(300).json({success: true, data:doc, message:"user update success"})
         })
     }
-
-
-
-
    async function comperLog(req,res){
 const {userEmail, userPassword} = req.body.logInfo
     await userModel.findOne({userEmail, userPassword}, (err,result)=>{
