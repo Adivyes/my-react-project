@@ -1,5 +1,5 @@
 // const baseApi = "http://localhost:8082/users/"
-const baseApi = process.env.NODE_ENV === 'production'? 'placeHolder': 'http://localhost:8082/users/'
+const baseApi = process.env.NODE_ENV === 'production'? 'https://adiv-users-mern-app.herokuapp.com/': 'http://localhost:8082/users/'
 export async function addUser(user){
     const requestOptions = {
         method: 'POST',
