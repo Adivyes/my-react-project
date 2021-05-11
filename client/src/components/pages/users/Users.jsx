@@ -21,7 +21,7 @@ export default function Users() {
 
     return (
         <div>
-            <Header greetings={'Users'}/>
+            <Header greetings = {'Users'}/>
                 <div className="mainUserDiv">
                  {users.map((user, index)=><UserCard  userData={user} id={index}  key={index}/>)}
                 </div>
