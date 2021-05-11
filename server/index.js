@@ -6,16 +6,16 @@ const cors = require("cors");
 const express = require("express");
 const app = express();
 
-const db = require("./DB");
+const dbConnection = require("./DB");
 const usersRouter = require('./routes/users-router')
-
+const path = require('path');
 const PORT = process.env.PORT || 8082;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(cors());
-db.on('error', (err)=>{console.log(err)})
+dbConnection.on('error', (err)=>{console.log(err)})
 app.listen(PORT, () => {
   console.log(`MERN app is connected to serve on server on port: ${PORT}`);
 });

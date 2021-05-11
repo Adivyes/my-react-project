@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const dbConnection = process.env.DB || "mongodb+srv://AdivUsers:AdivUsers12345@cluster0.dyhrc.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+const dbConnection = process.env.DB; 
 
 mongoose.connect(dbConnection, {
     useNewUrlParser: true,
